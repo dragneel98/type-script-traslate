@@ -1,5 +1,7 @@
 import { type AUTO_LANGUAGE, type SUPPORTED_LANGUAGES } from './constants'
 
+// typeof copia todo el contrato del obejeto suported_languages
+// keyof selecciona las keys
 export type Language = keyof typeof SUPPORTED_LANGUAGES
 export type AutoLanguage = typeof AUTO_LANGUAGE
 export type FromLanguage = Language | AutoLanguage
