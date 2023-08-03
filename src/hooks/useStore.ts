@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { type Language, type Action, type State, type FromLanguage } from '../types'
 import { useReducer } from 'react'
 
@@ -17,25 +18,29 @@ export function reducer (state: State, action: Action) {
     return {
       ...state,
       fromLanguage: state.toLanguage,
-      toLanguage: state.fromLanguage
+      toLanguage: state.fromLanguage,
+      result: ''
     }
   }
   if (type === 'SET_FROM_LANGUAGE') {
     return {
       ...state,
-      fromLanguage: action.payload
+      fromLanguage: action.payload,
+      result: ''
     }
   }
   if (type === 'SET_TO_LANGUAGE') {
     return {
       ...state,
-      toLanguage: action.payload
+      toLanguage: action.payload,
+      result: ''
     }
   }
   if (type === 'SET_FROM_TEXT') {
     return {
       ...state,
-      fromText: action.payload
+      fromText: action.payload,
+      result: ''
     }
   }
   if (type === 'SET_RESULT') {
