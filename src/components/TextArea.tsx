@@ -3,7 +3,7 @@ import { SectionTypes } from '../types.d'
 
 interface Props {
   type: SectionTypes
-  placeHolder: string
+  placeHolder?: string
   loading?: boolean
   onChange: (value: string) => void
   value: string
@@ -36,6 +36,7 @@ export default function TextArea ({ type, loading, value, onChange }: Props) {
     autoFocus={ type === SectionTypes.from}
     style={Styles}
     onChange={handleChange}
+    value={value}
    ></Form.Control>
   )
 }

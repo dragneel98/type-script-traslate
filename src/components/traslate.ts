@@ -61,7 +61,7 @@ export async function translate ({
       }
     ]
   })
-  console.log(completion)
+  // console.log(completion)
 
   return completion.data.choices[0]?.message?.content
 }
